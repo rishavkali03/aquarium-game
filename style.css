@@ -1,0 +1,81 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f1f2f6;
+}
+
+main{
+    height: 90vh;
+    width: 95%;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    gap: 10px;
+}
+
+
+main section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+section:nth-child(2){
+    align-items: end;
+}
+
+h2{
+    text-align: center;
+}
+
+input{
+    padding: 10px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid dodgerblue;
+    width: 100px;
+    text-align: center;
+}
+
+.numbers{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    width: 90%;
+}
+
+.numbers span{
+    background-color: white;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    font-size: clamp(20px , 4vw , 40px);
+    cursor: pointer;
+}
+.numbers span:active{
+    background-color: lightgray;
+}
+
+.progress{
+    width: clamp(50px , 90% , 100px);
+    height: 100%;
+    background-color: white;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress .bar{
+    position: absolute;
+    width: 100%;
+    background-color: dodgerblue;
+    height: 10%;
+    bottom: 0;
+    transition: 1s;
+}
